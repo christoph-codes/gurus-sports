@@ -1,0 +1,35 @@
+.Input {
+	display: block;
+	margin-bottom: 12px;
+	&__label {
+		font-size: 0.875rem;
+		font-weight: bold;
+		color: var(--chakra-colors-brand-black-default);
+		&:focus {
+			font-weight: bold;
+			color: var(--chakra-colors-brand-primary-default);
+		}
+		&--error {
+			color: var(--chakra-colors-brand-primary-default);
+		}
+	}
+	&__input {
+		padding: 1rem 1.5rem;
+		border-radius: 0.25rem;
+		width: 100%;
+		border-color: var(--chakra-colors-brand-black-light);
+		border-style: solid;
+		border-width: 1px;
+        background-color: var(--chakra-colors-brand-black-light);
+		&--error {
+			border-color: var(--chakra-colors-brand-primary-default);
+		}
+	}
+	&__errors {
+        list-style: none;
+		&__error {
+			font-size: 0.875rem;
+            color: var(--chakra-colors-brand-black-hover)
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.BookNow {
+    background-attachment: fixed;
+    background-position: center;
+    &__container {
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    }
+    p {
+        max-width: 70%;
+        @media(max-width: 30em) {
+            max-width: 100%;
+            line-height: 1.15;
+        }
+    }
+}

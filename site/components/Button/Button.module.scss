@@ -1,0 +1,139 @@
+.Button {
+	padding: 0.75rem 1.25rem;
+	font-weight: bold;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 50px;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	cursor:pointer;
+	transition: .15s ease-in-out;
+	line-height: 1;
+	text-decoration: none !important;
+	width: max-content;
+	font-weight: bold;
+	&:hover {
+		background-size: 0;
+	}
+	@media(max-width: 30em)  {
+		width: 100% !important;
+	}
+	&__fullWidth {
+		width: 100% !important;
+	}
+	&__primary {
+		background-color: var(--chakra-colors-brand-primary-default);
+		border-color: var(--chakra-colors-brand-primary-default);
+		color: var(--chakra-colors-brand-white-default) !important;
+		&:hover {
+			background-color: var(--chakra-colors-brand-primary-hover);
+			border-color: var(--chakra-colors-brand-primary-hover);
+			color: var(--chakra-colors-brand-white-default) !important;
+		}
+	}
+	&__primary-outline {
+		background-color: transparent;
+		border-color:  var(--chakra-colors-brand-primary-default);
+		color:  var(--chakra-colors-brand-primary-default);
+		&:hover {
+			background-color: transparent;
+			border-color: var(--chakra-colors-brand-primary-hover);
+			color: var(--chakra-colors-brand-primary-hover);
+		}
+	}
+	&__secondary {
+		background-color: var(--chakra-colors-brand-secondary-default);
+		border-color: var(--chakra-colors-brand-secondary-default);
+		color: var(--chakra-colors-brand-white-default) !important;
+		&:hover {
+			background-color: var(--chakra-colors-brand-secondary-hover);
+			border-color: var(--chakra-colors-brand-secondary-hover);
+			color: var(--chakra-colors-brand-white-default) !important;
+		}
+	}
+	&__secondary-outline {
+		background-color: transparent;
+		border-color:  var(--chakra-colors-brand-secondary-default);
+		color:  var(--chakra-colors-brand-secondary-default);
+		&:hover {
+			background-color: transparent;
+			border-color: var(--chakra-colors-brand-secondary-hover);
+			color: var(--chakra-colors-brand-secondary-hover);
+		}
+	}
+	&__tertiary {
+		background-color: var(--chakra-colors-brand-tertiary-default);
+		border-color: var(--chakra-colors-brand-tertiary-default);
+		color: var(--chakra-colors-brand-white-default) !important;
+		&:hover {
+			background-color: var(--chakra-colors-brand-tertiary-hover);
+			border-color: var(--chakra-colors-brand-tertiary-hover);
+			color: var(--chakra-colors-brand-white-default) !important;
+		}
+	}
+	&__tertiary-outline {
+		background-color: transparent;
+		border-color:  var(--chakra-colors-brand-tertiary-default);
+		color:  var(--chakra-colors-brand-tertiary-default);
+		&:hover {
+			background-color: transparent;
+			border-color: var(--chakra-colors-brand-tertiary-hover);
+			color: var(--chakra-colors-brand-tertiary-hover);
+		}
+	}
+	&__quad {
+		background-color: var(--chakra-colors-brand-quad-default);
+		border-color: var(--chakra-colors-brand-quad-default);
+		color: var(--chakra-colors-brand-white-default) !important;
+		&:hover {
+			background-color: var(--chakra-colors-brand-quad-hover);
+			border-color: var(--chakra-colors-brand-quad-hover);
+			color: var(--chakra-colors-brand-white-default) !important;
+		}
+	}
+	&__quad-outline {
+		background-color: transparent;
+		border-color:  var(--chakra-colors-brand-quad-default);
+		color:  var(--chakra-colors-brand-quad-default);
+		&:hover {
+			background-color: transparent;
+			border-color: var(--chakra-colors-brand-quad-hover);
+			color: var(--chakra-colors-brand-quad-hover);
+		}
+	}
+	&__white {
+		background-color: var(--chakra-colors-brand-white-default);
+		border-color: var(--chakra-colors-brand-white-default);
+		color: var(--chakra-colors-brand-black-default) !important;
+		&:hover {
+			background-color: var(--chakra-colors-brand-white-hover);
+			border-color: var(--chakra-colors-brand-white-hover);
+			color: var(--chakra-colors-brand-black-default) !important;
+		}
+	}
+	&__black {
+		background-color: var(--chakra-colors-brand-black-default);
+		border-color: var(--chakra-colors-brand-black-default);
+		color: var(--chakra-colors-brand-white-default) !important;
+		&:hover {
+			background-color: var(--chakra-colors-brand-black-hover);
+			border-color: var(--chakra-colors-brand-black-hover);
+			color: var(--chakra-colors-brand-white-default) !important;
+		}
+	}
+	&__black-outline {
+		background-color: transparent;
+		border-color:  var(--chakra-colors-brand-black-default);
+		color:  var(--chakra-colors-brand-black-default);
+		&:hover {
+			background-color: transparent;
+			border-color: var(--chakra-colors-brand-black-hover);
+			color: var(--chakra-colors-brand-black-hover);
+		}
+	}
+}

@@ -1,0 +1,67 @@
+.NavLink {
+	position: relative;
+	padding: 4px;
+	margin: 0 8px;
+	text-align: center;
+	span {
+		transition: 0.15s ease-in-out;
+		font-size: 16px;
+		color: var(--chakra-colors-brand-white-default);
+		white-space: nowrap;
+	}
+	&:hover, &Active {
+		span {
+			color: var(--chakra-colors-brand-primary-default);
+		}
+		+ .NavLink__dropdown {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__dropdown {
+		display: none;
+		padding: 12px 8px;
+		position: absolute;
+		background-color: white;
+		box-shadow: 0px 0px 10px -5px black;
+		border-radius: 4px;
+		.NavLinkSub {
+			padding: 8px;
+			span {
+				color: var(--chakra-colors-brand-black-default);
+				font-weight: bold;
+				font-size: 14px;
+			}
+			&:hover {
+				span {
+					color: var(--chakra-colors-brand-secondary-default)
+				}
+			}
+		}
+		&:hover {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__CTA {
+		background-color: var(--chakra-colors-brand-primary-default);
+		padding: 0.25rem 1rem;
+		border-radius: 8px;
+		transition: 0.15s ease-in-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: fit-content;
+		span {
+			color: var(--chakra-colors-brand-white-default) !important;
+			font-weight: bold;
+			text-align: center !important;
+			text-transform: uppercase;
+			font-size: 18px;
+			font-family: 'Bebas Neue';
+		}
+		&:hover {
+			background-color: var(--chakra-colors-brand-primary-hover);
+		}
+	}
+}
