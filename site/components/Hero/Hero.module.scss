@@ -1,0 +1,11 @@
+.Hero {
+	background-position: center;
+	&__home {
+		max-height: 420px;
+		height: 100vh;
+		border-bottom: solid 4px var(--chakra-brand-colors-primary-default);
+	}
+	&__title {
+		text-shadow: 0 0 10px rgba(0,0,0,0.8);
+	}
+}

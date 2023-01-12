@@ -1,0 +1,60 @@
+.SideNav {
+	width: 20rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: var(--chakra-colors-brand-white-default);
+    z-index: 11;
+    padding: 2rem;
+    transform: translateX(20rem);
+	transition: transform ease-in-out 0.15s;
+	box-shadow: none;
+	display: flex;
+    flex-direction: column;
+	height: 100vh;
+	max-width: 90%;
+	&__isOpen {
+		transform: translateX(0rem);
+		box-shadow: 0 -0.5rem 1rem rgba(63, 57, 49, 0.4);
+	}
+	&__link {
+		list-style-type: none;
+		margin-top: 0.5rem;
+		margin-bottom: 1rem !important;
+		text-align: right;
+		span {
+			color: var(--chakra-colors-brand-black-default);
+			font-size: 18px !important;
+			font-weight: bold;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			transition: all ease-in-out 0.15s;
+		}
+		&:hover {
+			span {
+				text-decoration: none;
+				color: var(--chakra-colors-brand-secondary-default);
+				background-size: 0 2px, 100% 2px;
+			}
+		}
+	}
+	&__close {
+		background-color: transparent;
+		color: var(--chakra-colors-brand-black-default);
+		border: none;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		transition: background-color 0.15s ease-in-out;
+		margin-bottom: 1rem;
+		transition: 0.15s ease-in-out;
+		&:hover {
+			color: var(--chakra-colors-brand-primary-default);
+		}
+	}
+}
