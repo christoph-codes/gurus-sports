@@ -1,0 +1,26 @@
+.Home {
+	&__hero {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		&Container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__located {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__book {
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+}
