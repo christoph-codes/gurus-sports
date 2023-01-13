@@ -6,7 +6,7 @@ import {
 	FC,
 	useEffect,
 } from "react";
-import SideNav from "../components/Sidenav";
+import SideNav from "../../site/components/Sidenav";
 
 export interface ISideNavContext {
 	isOpen: boolean;

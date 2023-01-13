@@ -53,7 +53,7 @@ const Form: FC<TFormProps> = ({
 		});
 	};
 	const renderInputs = inputs.map((input, index) => (
-		<Input key={index} form={form} onChange={formUpdate} {...input} />
+		<Input key={index} {...input} form={form} onChange={() => formUpdate} />
 	));
 	const [submitting, setSubmitting] = useState(false);
 	const submit = (e: ChangeEvent<HTMLFormElement>) => {

@@ -4,10 +4,10 @@ import { StaticImageData } from "next/image";
 import Head from "next/head";
 import styles from "./Page.module.scss";
 // import AnnouncementBar from "../../components/AnnouncementBar";
-import Navigation from "../../components/Navigation";
+import Navigation from "../../../site/components/Navigation";
 import { navigationLinks } from "../../utils/navLinks";
-import Footer from "../../components/Footer";
-import PoweredBy from "../../components/PoweredBy";
+import Footer from "../../../site/components/Footer";
+import PoweredBy from "../../../site/components/PoweredBy";
 
 export type PageProps = {
 	className?: string;

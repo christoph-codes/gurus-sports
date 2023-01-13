@@ -41,7 +41,8 @@ const NavLink = ({
 	...rest
 }: INavLinkProps) => {
 	const [active, setActive] = useState(false);
-	const doDropdownsExist: boolean = dropdownLinks?.length > 0;
+	const doDropdownsExist: boolean | undefined =
+		dropdownLinks && dropdownLinks?.length > 0;
 
 	return (
 		<>

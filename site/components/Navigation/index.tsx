@@ -1,8 +1,9 @@
+import { useSideNav } from "@/providers/SidenavProvider";
 import { HamburgerIcon, Icon } from "@chakra-ui/icons";
 import { Box } from "@chakra-ui/react";
 import Link from "next/link";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { useSideNav } from "../../providers/SidenavProvider";
+
 import {
 	bookLink,
 	facebookLink,

@@ -1,6 +1,5 @@
 import { Box, Heading, HeadingProps } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import Eyebrow, { TEyebrow } from "../Eyebrow";
 
 const headerSize = {
 	h1: "3xl",
@@ -13,7 +12,6 @@ const headerSize = {
 
 export interface ITitleProps extends HeadingProps {
 	children: ReactNode;
-	eyebrow?: TEyebrow | false;
 	h1?: boolean;
 	h2?: boolean;
 	h3?: boolean;
@@ -26,7 +24,6 @@ export interface ITitleProps extends HeadingProps {
 
 const Title = ({
 	children,
-	eyebrow,
 	h1,
 	h2,
 	h3,
@@ -52,12 +49,6 @@ const Title = ({
 		: "h1";
 	return (
 		<Box className={className || ""}>
-			{eyebrow &&
-				(chosenHeader === "h1" ||
-					chosenHeader === "h2" ||
-					chosenHeader === "h3") && (
-					<Eyebrow color={eyebrow} align={textAlign} />
-				)}
 			<Heading
 				color="brand.black.default"
 				as={chosenHeader}
