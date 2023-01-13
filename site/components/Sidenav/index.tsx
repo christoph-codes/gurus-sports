@@ -1,15 +1,14 @@
 import { FC } from "react";
-import Link from "next/link";
+import { CloseIcon, Icon } from "@chakra-ui/icons";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { Flex } from "@chakra-ui/react";
 import {
 	facebookLink,
 	instagramLink,
 	navigationLinks,
 } from "../../utils/navLinks";
 import styles from "./Sidenav.module.scss";
-import { CloseIcon, Icon } from "@chakra-ui/icons";
 import NavLink from "../NavLink";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { Flex } from "@chakra-ui/react";
 
 export type TSideNav = {
 	isOpen?: boolean;

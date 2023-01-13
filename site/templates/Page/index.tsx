@@ -1,13 +1,13 @@
-import { ReactNode, FC } from 'react';
-import { useRouter } from 'next/router';
-import { StaticImageData } from 'next/image';
-import Head from 'next/head';
-import styles from './Page.module.scss';
-import AnnouncementBar from '../../components/AnnouncementBar';
-import Navigation from '../../components/Navigation';
-import { navigationLinks } from '../../utils/navLinks';
-import Footer from '../../components/Footer';
-import PoweredBy from '../../components/PoweredBy';
+import { ReactNode, FC } from "react";
+import { useRouter } from "next/router";
+import { StaticImageData } from "next/image";
+import Head from "next/head";
+import styles from "./Page.module.scss";
+// import AnnouncementBar from "../../components/AnnouncementBar";
+import Navigation from "../../components/Navigation";
+import { navigationLinks } from "../../utils/navLinks";
+import Footer from "../../components/Footer";
+import PoweredBy from "../../components/PoweredBy";
 
 export type PageProps = {
 	className?: string;
@@ -22,14 +22,14 @@ export type PageProps = {
 const PageTemplate: FC<PageProps> = ({
 	className,
 	metaTitle = "Guru's Sports Bar & Grill » Catch the latest game and the best grub!",
-	metaImage = '/gurus_seo.png',
-	metaDescription = 'A sports bar and grill located in St. George!',
+	metaImage = "/gurus_seo.png",
+	metaDescription = "A sports bar and grill located in St. George!",
 	children,
 }) => {
 	const router = useRouter();
-	const domain = 'https://gurussportsgrill.com';
+	const domain = "https://gurussportsgrill.com";
 	const url = router && router.asPath ? router.asPath : undefined;
-	const canonical = url && url === '/' ? domain : domain + url;
+	const canonical = url && url === "/" ? domain : domain + url;
 	return (
 		<>
 			<Head>

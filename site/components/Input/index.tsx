@@ -1,6 +1,6 @@
-import { ChangeEvent, FC } from 'react';
-import { EErrorMessages } from '../../utils/inputValidations';
-import styles from './Input.module.scss';
+import { ChangeEvent, FC } from "react";
+import { EErrorMessages } from "../../utils/inputValidations";
+import styles from "./Input.module.scss";
 
 export type IInputProps = {
 	type: string;
@@ -16,13 +16,15 @@ export type IInputProps = {
 		};
 	};
 	onChange: (
+		// eslint-disable-next-line no-unused-vars
 		e: ChangeEvent<HTMLInputElement>,
-		validation?: EErrorMessages[],
+		// eslint-disable-next-line no-unused-vars
+		validation?: EErrorMessages[]
 	) => void;
 };
 
 const Input: FC<IInputProps> = ({
-	type = 'text',
+	type = "text",
 	name,
 	placeholder,
 	label,
@@ -37,10 +39,10 @@ const Input: FC<IInputProps> = ({
 			<span
 				className={`${styles.Input__label} ${
 					form[name as keyof typeof form]?.isNotValid.some(
-						(e) => e !== '',
+						(e) => e !== ""
 					)
-						? styles['Input__label--error']
-						: ''
+						? styles["Input__label--error"]
+						: ""
 				}`}
 			>
 				{label}
@@ -48,16 +50,16 @@ const Input: FC<IInputProps> = ({
 			<input
 				className={`${styles.Input__input} ${
 					form[name as keyof typeof form]?.isNotValid.some(
-						(e) => e !== '',
+						(e) => e !== ""
 					)
-						? styles['Input__input--error']
-						: ''
+						? styles["Input__input--error"]
+						: ""
 				}`}
 				name={name}
 				placeholder={placeholder}
 				type={type}
 				id={name}
-				value={form[name as keyof typeof form]?.value || ''}
+				value={form[name as keyof typeof form]?.value || ""}
 				onChange={(e) => onChange(e, validation)}
 				required={required}
 				{...rest}
@@ -66,14 +68,14 @@ const Input: FC<IInputProps> = ({
 				<ul className={styles.Input__errors}>
 					{form[name as keyof typeof form]?.isNotValid.map(
 						(err, index) =>
-							err !== '' && (
+							err !== "" && (
 								<li
 									key={index}
 									className={styles.Input__errors__error}
 								>
 									{err}
 								</li>
-							),
+							)
 					)}
 				</ul>
 			)}

@@ -1,16 +1,16 @@
-import { FC, useState, ChangeEvent } from 'react';
-import inputValidations, { EErrorMessages } from '../../utils/inputValidations';
-import { emailSubmit } from '../../utils/emailSubmit';
+import { FC, useState, ChangeEvent } from "react";
+import inputValidations, { EErrorMessages } from "../../utils/inputValidations";
+import { emailSubmit } from "../../utils/emailSubmit";
 // eslint-disable-next-line import/no-unresolved
-import Button from '../Button';
-import { IButtonProps } from '../Button';
-import Input, { IInputProps } from '../Input';
-import Loader from '../Loader';
-import styles from './Form.module.scss';
+import Button, { IButtonProps } from "../Button";
+import Input, { IInputProps } from "../Input";
+import Loader from "../Loader";
+import styles from "./Form.module.scss";
 
 export type TFormProps = {
 	inputs: IInputProps[];
 	className?: string;
+	// eslint-disable-next-line no-unused-vars
 	onSubmit: (e: {}) => void;
 	submitButton: IButtonProps;
 	formName: string;
@@ -18,7 +18,7 @@ export type TFormProps = {
 
 const Form: FC<TFormProps> = ({
 	inputs,
-	className = '',
+	className = "",
 	onSubmit,
 	submitButton,
 	formName,
@@ -26,7 +26,7 @@ const Form: FC<TFormProps> = ({
 	const [form, setForm] = useState({});
 	const formUpdate = (
 		e: ChangeEvent<HTMLInputElement>,
-		validation: EErrorMessages[],
+		validation: EErrorMessages[]
 	) => {
 		const { name, value } = e.target;
 		const validate = () =>
@@ -42,7 +42,7 @@ const Form: FC<TFormProps> = ({
 						](value);
 					return isValid;
 				}
-				throw new Error('Not a valid input validator.');
+				throw new Error("Not a valid input validator.");
 			});
 		setForm({
 			...form,
@@ -80,7 +80,7 @@ const Form: FC<TFormProps> = ({
 			{submitting ? (
 				<Loader marginTop={8} isLoading={submitting} />
 			) : (
-				<Button type='submit' {...submitButton}>
+				<Button type="submit" {...submitButton}>
 					{submitButton.children}
 				</Button>
 			)}

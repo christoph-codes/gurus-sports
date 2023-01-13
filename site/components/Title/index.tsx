@@ -1,14 +1,14 @@
-import { Box, Heading, HeadingProps } from '@chakra-ui/react';
-import { ReactNode } from 'react';
-import Eyebrow, { TEyebrow } from '../Eyebrow';
+import { Box, Heading, HeadingProps } from "@chakra-ui/react";
+import { ReactNode } from "react";
+import Eyebrow, { TEyebrow } from "../Eyebrow";
 
 const headerSize = {
-	h1: '3xl',
-	h2: '2xl',
-	h3: 'xl',
-	h4: 'lg',
-	h5: 'md',
-	h6: 'sm',
+	h1: "3xl",
+	h2: "2xl",
+	h3: "xl",
+	h4: "lg",
+	h5: "md",
+	h6: "sm",
 };
 
 export interface ITitleProps extends HeadingProps {
@@ -20,7 +20,7 @@ export interface ITitleProps extends HeadingProps {
 	h4?: boolean;
 	h5?: boolean;
 	h6?: boolean;
-	textAlign?: HeadingProps['textAlign'];
+	textAlign?: HeadingProps["textAlign"];
 	className?: string;
 }
 
@@ -33,33 +33,33 @@ const Title = ({
 	h4,
 	h5,
 	h6,
-	textAlign = 'left',
+	textAlign = "left",
 	className,
 	...rest
 }: ITitleProps & HeadingProps) => {
 	const chosenHeader = h1
-		? 'h1'
+		? "h1"
 		: h2
-		? 'h2'
+		? "h2"
 		: h3
-		? 'h3'
+		? "h3"
 		: h4
-		? 'h4'
+		? "h4"
 		: h5
-		? 'h5'
+		? "h5"
 		: h6
-		? 'h6'
-		: 'h1';
+		? "h6"
+		: "h1";
 	return (
-		<Box className={className || ''}>
+		<Box className={className || ""}>
 			{eyebrow &&
-				(chosenHeader === 'h1' ||
-					chosenHeader === 'h2' ||
-					chosenHeader === 'h3') && (
+				(chosenHeader === "h1" ||
+					chosenHeader === "h2" ||
+					chosenHeader === "h3") && (
 					<Eyebrow color={eyebrow} align={textAlign} />
 				)}
 			<Heading
-				color='brand.black.default'
+				color="brand.black.default"
 				as={chosenHeader}
 				size={headerSize[chosenHeader]}
 				textAlign={textAlign}

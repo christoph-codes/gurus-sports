@@ -1,8 +1,8 @@
-import { Box, BoxProps } from '@chakra-ui/react';
-import { ReactNode } from 'react';
-import Section from '../Section';
-import Title from '../Title';
-import styles from './Hero.module.scss';
+import { Box, BoxProps } from "@chakra-ui/react";
+import { ReactNode } from "react";
+import Section from "../Section";
+import Title from "../Title";
+import styles from "./Hero.module.scss";
 
 export interface IHeroProps {
 	children?: ReactNode;
@@ -21,29 +21,27 @@ const Hero = ({
 	containerClass,
 	title,
 	...rest
-}: IHeroProps & BoxProps) => {
-	return (
-		<Box
-			as={Section}
-			className={`${styles.Hero} ${className || ''} ${
-				home ? styles.Hero__home : ''
-			}`}
-			bgColor='brand.white.hover'
-			bgImage={bgImg}
-			containerClass={containerClass}
-			{...rest}
+}: IHeroProps & BoxProps) => (
+	<Box
+		as={Section}
+		className={`${styles.Hero} ${className || ""} ${
+			home ? styles.Hero__home : ""
+		}`}
+		bgColor="brand.white.hover"
+		bgImage={bgImg}
+		containerClass={containerClass}
+		{...rest}
+	>
+		<Title
+			className={styles.Hero__title}
+			textAlign="center"
+			color="white"
+			textShadow="2xl"
 		>
-			<Title
-				className={styles.Hero__title}
-				textAlign='center'
-				color='white'
-				textShadow='2xl'
-			>
-				{title}
-			</Title>
-			{children}
-		</Box>
-	);
-};
+			{title}
+		</Title>
+		{children}
+	</Box>
+);
 
 export default Hero;

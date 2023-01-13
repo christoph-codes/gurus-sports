@@ -1,6 +1,6 @@
-import { Box, BoxProps, Text } from '@chakra-ui/react';
-import { FC } from 'react';
-import styles from './Loader.module.scss';
+import { Box, BoxProps } from "@chakra-ui/react";
+import { FC } from "react";
+import styles from "./Loader.module.scss";
 
 export type TLoaderProps = {
 	className?: string;
