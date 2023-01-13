@@ -35,19 +35,17 @@ const Navigation = ({ links, className }: INavigationProps) => {
 					<Logo className={styles.Navigation__logo} />
 				</Link>
 				<ul className={styles.Navigation__nav}>
-					{links?.map((item, index) => {
-						return (
-							<NavLink
-								key={index}
-								dropdownLinks={item.dropdown}
-								cta={item.cta}
-								href={item.link.path}
-								target={item.link.target}
-							>
-								{item.link.label}
-							</NavLink>
-						);
-					})}
+					{links?.map((item, index) => (
+						<NavLink
+							key={index}
+							dropdownLinks={item.dropdown}
+							cta={item.cta}
+							href={item.link.path}
+							target={item.link.target}
+						>
+							{item.link.label}
+						</NavLink>
+					))}
 					<NavLink href={facebookLink}>
 						<Icon boxSize={8} as={FaFacebook} />
 					</NavLink>
@@ -64,6 +62,7 @@ const Navigation = ({ links, className }: INavigationProps) => {
 						Book Now
 					</NavLink>
 					<button
+						type="button"
 						className={`${styles.Navigation__hamburger}`}
 						onClick={() => toggleSideNav()}
 					>
@@ -71,7 +70,7 @@ const Navigation = ({ links, className }: INavigationProps) => {
 					</button>
 				</Box>
 			</Container>
-			<div className={styles.Navigation__utilityNav}></div>
+			<div className={styles.Navigation__utilityNav} />
 		</Box>
 	);
 };
