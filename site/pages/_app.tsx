@@ -2,8 +2,8 @@ import type { AppProps } from "next/app";
 import Script from "next/script";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../styles/theme";
-import "../styles/globals.scss";
 import SideNavProvider from "../providers/SidenavProvider";
+import "../styles/globals.scss";
 
 const App = ({ Component, pageProps }: AppProps) => (
 	<>

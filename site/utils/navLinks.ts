@@ -1,5 +1,3 @@
-import { INavigationProps } from "../components/Navigation";
-
 export const bookLink = "/book";
 export const facebookLink =
 	"https://www.facebook.com/profile.php?id=100088242930394";
@@ -7,7 +5,7 @@ export const instagramLink = "https://www.instagram.com/gurus_sports_grill/";
 
 export const homepagePath: "/home" | "/" = "/";
 
-export const navigationLinks: INavigationProps["links"] = [
+export const navigationLinks = [
 	{
 		link: {
 			label: "Home",
@@ -41,7 +39,7 @@ export const navigationLinks: INavigationProps["links"] = [
 	},
 ];
 
-export const utilityLinks: INavigationProps["links"] = [
+export const utilityLinks = [
 	{
 		link: {
 			label: "Privacy Policy",

@@ -8,6 +8,7 @@ module.exports = {
 		"airbnb",
 		"plugin:react/jsx-runtime",
 		"prettier",
+		"next",
 	],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
@@ -37,6 +38,7 @@ module.exports = {
 		"react/no-array-index-key": 0,
 		"react/jsx-no-constructed-context-values": 0,
 		"import/extensions": 0,
+		"import/no-cycle": 0,
 	},
 	settings: {
 		"import/resolver": {
