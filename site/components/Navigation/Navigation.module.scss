@@ -1,5 +1,6 @@
 .Navigation {
-	padding: 16px 0;
+	padding: 12px 0 0;
+	margin-bottom: 16px;
 	&__logoContainer {
 		max-width: 120px;
 	}
@@ -9,8 +10,14 @@
 	&__container {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		height: 80px;
+		margin-bottom: -30px;
+		@media(max-width: 850px) {
+			align-items: center;
+			height: 80px;
+			margin-bottom: 0px;
+		}
 	}
 	&__nav {
 		display: flex;
@@ -22,6 +29,11 @@
 	&__utilityNav {
 		background-color: var(--chakra-colors-brand-secondary-dark);
 		height: 40px;
+		margin-top: 8px;
+		padding: 8px 0;
+		@media(max-width: 850px) {
+			display: none;
+		}
 	}
 	&__mobileNav {
 		display: none;

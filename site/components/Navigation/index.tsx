@@ -1,8 +1,9 @@
-import { useSideNav } from "@/providers/SidenavProvider";
-import { HamburgerIcon, Icon } from "@chakra-ui/icons";
-import { Box } from "@chakra-ui/react";
 import Link from "next/link";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { HamburgerIcon, Icon } from "@chakra-ui/icons";
+import { Box, Text } from "@chakra-ui/react";
+import { GrInstagram } from "react-icons/gr";
+import { FaFacebook } from "react-icons/fa";
+import { useSideNav } from "@/providers/SidenavProvider";
 
 import {
 	bookLink,
@@ -47,11 +48,11 @@ const Navigation = ({ links, className }: INavigationProps) => {
 							{item.link.label}
 						</NavLink>
 					))}
+					<NavLink href={instagramLink}>
+						<Icon boxSize={8} as={GrInstagram} />
+					</NavLink>
 					<NavLink href={facebookLink}>
 						<Icon boxSize={8} as={FaFacebook} />
-					</NavLink>
-					<NavLink href={instagramLink}>
-						<Icon boxSize={8} as={FaInstagram} />
 					</NavLink>
 				</ul>
 				<Box className={styles.Navigation__mobileNav}>
@@ -60,7 +61,7 @@ const Navigation = ({ links, className }: INavigationProps) => {
 						href={bookLink}
 						cta
 					>
-						Book Now
+						Order Online
 					</NavLink>
 					<button
 						type="button"
@@ -71,7 +72,19 @@ const Navigation = ({ links, className }: INavigationProps) => {
 					</button>
 				</Box>
 			</Container>
-			<div className={styles.Navigation__utilityNav} />
+			<div className={styles.Navigation__utilityNav}>
+				<Container paddingY={0}>
+					<Text
+						textAlign="right"
+						fontFamily="Bebas Neue"
+						fontSize="lg"
+						lineHeight="1.5"
+						marginBottom={0}
+					>
+						New location at SunRiver Golf Club, in st George!
+					</Text>
+				</Container>
+			</div>
 		</Box>
 	);
 };
