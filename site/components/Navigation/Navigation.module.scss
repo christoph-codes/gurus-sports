@@ -1,6 +1,9 @@
 .Navigation {
 	padding: 12px 0 0;
 	margin-bottom: 16px;
+	position: sticky;
+	top: 0;
+	background-color: var(--chakra-colors-brand-secondary-default);
 	&__logoContainer {
 		max-width: 120px;
 	}
