@@ -1,31 +1,37 @@
 import { Flex, Image, Text, Box } from "@chakra-ui/react";
-import Link from "next/link";
-import { navigationLinks, utilityLinks } from "../../utils/navLinks";
+import { navigationLinks } from "../../utils/navLinks";
 import Container from "../Container";
+import NavLink from "../NavLink";
 
 const Footer = () => (
 	<Flex
 		as="footer"
-		bgColor="brand.black.default"
-		paddingY={{ base: 3, md: 6 }}
+		bgColor="brand.secondary.default"
+		paddingTop={{ base: 3, md: 6 }}
+		paddingBottom={{ base: 3, md: 3 }}
+		paddingX={4}
 	>
-		<Flex as={Container} justifyContent="space-between">
-			<Box display={{ base: "none", md: "block" }}>
+		<Container
+			as={Container}
+			justifyContent="center"
+			bgColor="brand.secondary.hover"
+			padding={{ base: 4, md: 8 }}
+			marginBottom={8}
+			borderRadius={8}
+		>
+			<Box>
 				<Flex
 					as="ul"
-					borderBottomStyle="solid"
-					borderBottomWidth="1px"
-					borderBottomColor="brand.black.hover"
 					listStyleType="none"
 					alignItems="center"
+					justifyContent="center"
+					display={{ base: "none", md: "flex" }}
 				>
 					{navigationLinks.map((item, index) => (
 						<Text
-							as={Link}
+							as={NavLink}
 							key={index}
 							href={item.link.path}
-							marginRight={4}
-							marginBottom={4}
 							color="brand.white.default"
 							_hover={{ color: "brand.white.hover" }}
 						>
@@ -33,37 +39,22 @@ const Footer = () => (
 						</Text>
 					))}
 				</Flex>
-				<Flex
-					as="ul"
-					listStyleType="none"
-					alignItems="center"
-					marginTop={4}
+				<Text
+					marginY={4}
+					color="brand.secondary.light"
+					textAlign="center"
 				>
-					{utilityLinks.map((item, index) => (
-						<Text
-							as={Link}
-							key={index}
-							href={item.link.path}
-							marginRight={4}
-							color="brand.black.hover"
-							_hover={{ color: "brand.white.hover" }}
-						>
-							{item.link.label}
-						</Text>
-					))}
-					<Text as="span" marginRight={4} color="brand.black.hover">
-						{`Copyright © 2022. Guru's Sports Bar & Grill. All Rights
+					{`Copyright © ${new Date().getFullYear()}. Guru's Sports Bar & Grill. All Rights
 						Reserved.`}
-					</Text>
-				</Flex>
+				</Text>
 			</Box>
 			<Image
 				src="/logo.svg"
 				alt="Guru's Sports Bar & Grill Icon"
-				width={{ base: "30px", md: "auto" }}
-				margin={{ base: "0 auto", md: "0" }}
+				width="64px"
+				margin={{ base: "8px auto -44px", md: "8px auto -64px" }}
 			/>
-		</Flex>
+		</Container>
 	</Flex>
 );
 
