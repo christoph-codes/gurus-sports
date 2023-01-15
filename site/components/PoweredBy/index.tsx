@@ -7,25 +7,26 @@ import styles from "./PoweredBy.module.scss";
 const PoweredBy = () => (
 	<Flex
 		className={styles.PoweredBy}
-		bgColor="brand.black.default"
+		bgColor="brand.secondary.default"
 		justifyContent="center"
 		alignItems="center"
 		textAlign="center"
-		paddingBottom={2}
+		paddingBottom={4}
 	>
-		<Container
-			borderColor="brand.black.hover"
-			borderTop="1px solid"
-			paddingTop={2}
-		>
-			<Text color="brand.white.hover" marginBottom={0}>
+		<Container paddingTop={2}>
+			<Text color="brand.secondary.light" marginBottom={0}>
 				Site made with{" "}
-				<Icon marginBottom="-3px" as={FaHeart} color="#e1ff00" /> by{" "}
+				<Icon
+					marginBottom="-3px"
+					as={FaHeart}
+					color="brand.white.default"
+				/>{" "}
+				by{" "}
 				<Text
 					whiteSpace="nowrap"
 					as={Link}
 					fontSize="md"
-					color="#e1ff00"
+					color="brand.white.default"
 					target="_blank"
 					href="https://thekirkconcept.com?campaign=Gurus"
 					margin={0}
