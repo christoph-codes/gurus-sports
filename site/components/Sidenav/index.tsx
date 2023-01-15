@@ -38,7 +38,9 @@ const SideNav: FC<TSideNav> = ({
 		</button>
 		{navigationLinks?.map((item, index) => (
 			<NavLink
-				className={styles.SideNav__link}
+				className={`${styles.SideNav__link} ${
+					item.cta && styles.SideNav__CTA
+				}`}
 				key={index}
 				href={item.link.path}
 				onClick={() => toggleSideNav()}
@@ -49,10 +51,18 @@ const SideNav: FC<TSideNav> = ({
 		))}
 		<Flex justifyContent="center">
 			<NavLink href={facebookLink}>
-				<Icon boxSize={8} as={FaFacebook} />
+				<Icon
+					_hover={{ color: "brand.secondary.hover" }}
+					boxSize={8}
+					as={FaFacebook}
+				/>
 			</NavLink>
 			<NavLink href={instagramLink}>
-				<Icon boxSize={8} as={FaInstagram} />
+				<Icon
+					_hover={{ color: "brand.secondary.hover" }}
+					boxSize={8}
+					as={FaInstagram}
+				/>
 			</NavLink>
 		</Flex>
 	</aside>

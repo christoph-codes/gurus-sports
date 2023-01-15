@@ -4,7 +4,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: var(--chakra-colors-brand-white-default);
+    background: var(--chakra-colors-brand-primary-default);
     z-index: 11;
     padding: 2rem;
     transform: translateX(20rem);
@@ -22,9 +22,10 @@
 		list-style-type: none;
 		margin-top: 0.5rem;
 		margin-bottom: 1rem !important;
-		text-align: right;
+		text-align: center;
+		color: var(--chakra-colors-brand-secondary-default);
 		span {
-			color: var(--chakra-colors-brand-black-default);
+			color: var(--chakra-colors-brand-white-default);
 			font-size: 18px !important;
 			font-weight: bold;
 			background-color: transparent;
@@ -35,9 +36,17 @@
 		&:hover {
 			span {
 				text-decoration: none;
-				color: var(--chakra-colors-brand-secondary-default);
+				color: var(--chakra-colors-brand-secondary-default) !important;
 				background-size: 0 2px, 100% 2px;
 			}
+		}
+	}
+	&__CTA {
+		background-color: var(--chakra-colors-brand-secondary-default);
+		padding: 8px;
+		span {
+			font-size: 21px !important;
+			letter-spacing: 1px;
 		}
 	}
 	&__close {
@@ -54,7 +63,7 @@
 		margin-bottom: 1rem;
 		transition: 0.15s ease-in-out;
 		&:hover {
-			color: var(--chakra-colors-brand-primary-default);
+			color: var(--chakra-colors-brand-secondary-hover);
 		}
 	}
 }
