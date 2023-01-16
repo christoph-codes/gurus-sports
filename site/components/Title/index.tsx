@@ -1,14 +1,6 @@
-import { Box, Heading, HeadingProps } from "@chakra-ui/react";
+import { Heading, HeadingProps } from "@chakra-ui/react";
 import { ReactNode } from "react";
-
-const headerSize = {
-	h1: "3xl",
-	h2: "2xl",
-	h3: "xl",
-	h4: "lg",
-	h5: "md",
-	h6: "sm",
-};
+import styles from "./Title.module.scss";
 
 export interface ITitleProps extends HeadingProps {
 	children: ReactNode;
@@ -20,6 +12,7 @@ export interface ITitleProps extends HeadingProps {
 	h6?: boolean;
 	textAlign?: HeadingProps["textAlign"];
 	className?: string;
+	rest?: any;
 }
 
 const Title = ({
@@ -34,7 +27,7 @@ const Title = ({
 	className,
 	...rest
 }: ITitleProps & HeadingProps) => {
-	const chosenHeader = h1
+	const chosenHeader: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" = h1
 		? "h1"
 		: h2
 		? "h2"
@@ -47,19 +40,16 @@ const Title = ({
 		: h6
 		? "h6"
 		: "h1";
+	const Tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" = chosenHeader;
 	return (
-		<Box className={className || ""}>
-			<Heading
-				color="brand.black.default"
-				as={chosenHeader}
-				size={headerSize[chosenHeader]}
-				textAlign={textAlign}
-				marginBottom={4}
-				{...rest}
-			>
-				{children}
-			</Heading>
-		</Box>
+		<Heading
+			as={Tag}
+			fontFamily="heading"
+			className={`${styles.Title} ${className}`}
+			{...rest}
+		>
+			{children}
+		</Heading>
 	);
 };
 

@@ -25,7 +25,7 @@ const colors = {
 };
 const fonts = {
 	body: "Inter, sans-serif",
-	heading: "Bebas, sans-serif",
+	heading: `'Bebas Neue', cursive`,
 	mono: "Menlo, monospace",
 };
 

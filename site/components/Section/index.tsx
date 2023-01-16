@@ -1,5 +1,4 @@
 import { Box, BoxProps, Text } from "@chakra-ui/react";
-import { StaticImageData } from "next/image";
 import { FC, ReactNode } from "react";
 import Container from "../Container";
 import Title from "../Title";
@@ -11,7 +10,7 @@ export type ISectionProps = {
 	containerClass?: string;
 	hideContainer?: boolean;
 	bgColor?: string;
-	bgImg?: StaticImageData;
+	bgImg?: string;
 	title?: string;
 	description?: string;
 };
@@ -34,7 +33,7 @@ const Section: FC<ISectionProps & BoxProps> = ({
 					h2
 					className={styles.Section__title}
 					textAlign="center"
-					marginBottom={8}
+					marginBottom={16}
 				>
 					{title}
 				</Title>
@@ -52,13 +51,8 @@ const Section: FC<ISectionProps & BoxProps> = ({
 			as="section"
 			bgColor={bgColor || ""}
 			className={`${styles.Section} ${className}`}
-			paddingX={4}
-			backgroundImage={
-				bgImg && {
-					backgroundImage: `url(${bgImg.src})`,
-					backgroundColor: "unset",
-				}
-			}
+			paddingX={{ base: 4, md: 0 }}
+			backgroundImage={bgImg && `url(${bgImg})`}
 			{...rest}
 		>
 			{!hideContainer ? (

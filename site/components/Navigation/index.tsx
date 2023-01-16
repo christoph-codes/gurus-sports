@@ -28,7 +28,16 @@ export interface INavigationProps {
 const Navigation = ({ links, className }: INavigationProps) => {
 	const { toggleSideNav } = useSideNav();
 	return (
-		<Box as="nav" className={`${styles.Navigation} ${className || ""}`}>
+		<Box
+			as="nav"
+			className={`${styles.Navigation} ${className || ""}`}
+			marginBottom="24px"
+			borderBottom={{
+				base: "solid 1px",
+				md: "none",
+			}}
+			borderColor="brand.secondary.hover"
+		>
 			<Container className={styles.Navigation__container}>
 				<Link
 					className={styles.Navigation__logoContainer}

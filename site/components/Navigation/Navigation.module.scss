@@ -43,6 +43,7 @@
 		align-items: center;
 		@media(max-width: 850px) {
 			display: flex;
+			margin-top: -12px;
 		}
 	}
 	&__mobileCTA {
