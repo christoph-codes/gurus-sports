@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
   background-color: var(--chakra-colors-brand-secondary-default) !important;
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family: 'Bebas Neue';
+	font-family: 'Bebas Neue', cursive;
 }
 h1,h2,h3,h4,h5,h6, p,li {
 	color: var(--chakra-colors-brand-white-default)
@@ -35,6 +35,7 @@ a {
 p {
 	line-height: 1.5;
 	color: var(--chakra-colors-brand-white-default);
+	font-family: 'Inter', sans-serif;
 }
 img {
   min-width: 0;
