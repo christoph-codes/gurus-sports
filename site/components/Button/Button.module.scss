@@ -8,8 +8,8 @@
 	text-transform: uppercase;
 	border-width: 2px;
 	border-style: solid;
-	border-radius: 50px;
-	font-size: 1rem;
+	border-radius: 4px;
+	font-size: 1.25rem;
 	letter-spacing: 1px;
 	cursor:pointer;
 	transition: .15s ease-in-out;
@@ -17,6 +17,7 @@
 	text-decoration: none !important;
 	width: max-content;
 	font-weight: bold;
+	font-family: 'Bebas Neue', cursive;
 	&:hover {
 		background-size: 0;
 	}
