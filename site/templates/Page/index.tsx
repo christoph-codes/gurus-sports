@@ -8,6 +8,7 @@ import Navigation from "../../../site/components/Navigation";
 import { navigationLinks } from "../../utils/navLinks";
 import Footer from "../../../site/components/Footer";
 import PoweredBy from "../../../site/components/PoweredBy";
+import Container from "@/components/Container";
 
 export type PageProps = {
 	className?: string;
@@ -66,7 +67,7 @@ const PageTemplate: FC<PageProps> = ({
 			</AnnouncementBar> */}
 			<Navigation links={navigationLinks} />
 			<main className={`${styles.PageTemplate} ${className}`}>
-				{children}
+				<Container>{children}</Container>
 			</main>
 			<Footer />
 			<PoweredBy />
