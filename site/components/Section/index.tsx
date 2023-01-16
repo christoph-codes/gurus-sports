@@ -33,7 +33,7 @@ const Section: FC<ISectionProps & BoxProps> = ({
 					h2
 					className={styles.Section__title}
 					textAlign="center"
-					marginBottom={8}
+					marginBottom={16}
 				>
 					{title}
 				</Title>
@@ -51,7 +51,7 @@ const Section: FC<ISectionProps & BoxProps> = ({
 			as="section"
 			bgColor={bgColor || ""}
 			className={`${styles.Section} ${className}`}
-			paddingX={4}
+			paddingX={{ base: 4, md: 0 }}
 			backgroundImage={bgImg && `url(${bgImg})`}
 			{...rest}
 		>
