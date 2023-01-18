@@ -1,5 +1,5 @@
-import { Box, Flex, Link, Text } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Box, Flex, Text } from "@chakra-ui/react";
+// import NextLink from "next/link";
 import Title from "../Title";
 import styles from "./Tabs.module.scss";
 
@@ -18,7 +18,7 @@ export interface ITabsProps {
 const Tabs = ({ content, className }: ITabsProps) => {
 	return (
 		<Box className={`${styles.Tabs} ${className || ""}`}>
-			<Box
+			{/* <Box
 				bgColor="brand.secondary.default"
 				border="none"
 				position="sticky"
@@ -51,7 +51,7 @@ const Tabs = ({ content, className }: ITabsProps) => {
 						</Link>
 					);
 				})}
-			</Box>
+			</Box> */}
 			<Box>
 				{content.map((item, index) => {
 					return (
