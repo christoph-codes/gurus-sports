@@ -1,6 +1,6 @@
 import { Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import { bookLink } from "../../utils/navLinks";
+import { toastTabLink } from "../../utils/navLinks";
 import Button from "../Button";
 import Section from "../Section";
 import Title from "../Title";
@@ -31,8 +31,8 @@ const BookNow = ({ title, description }: IBookNowProps) => (
 				{description}
 			</Text>
 		)}
-		<Button variant="white" href={bookLink}>
-			Book Now
+		<Button variant="white" href={toastTabLink}>
+			Order Online
 		</Button>
 	</Section>
 );
