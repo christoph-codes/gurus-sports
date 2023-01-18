@@ -3,8 +3,8 @@ import { extendTheme } from "@chakra-ui/react";
 const colors = {
 	brand: {
 		primary: {
-			default: "#C90000",
-			hover: "#AA0000",
+			default: "#C93000",
+			hover: "#AA3000",
 			light: "#DEB7B7",
 			dark: "#390000",
 		},
