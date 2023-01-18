@@ -1,4 +1,4 @@
-export const bookLink = "/book";
+export const toastTabLink = "https://www.toasttab.com/gurussportsgrill";
 export const facebookLink =
 	"https://www.facebook.com/profile.php?id=100088242930394";
 export const instagramLink = "https://www.instagram.com/gurus_sports_grill/";
@@ -33,7 +33,7 @@ export const navigationLinks = [
 	{
 		link: {
 			label: "Order Online",
-			path: bookLink,
+			path: toastTabLink,
 		},
 		cta: true,
 	},

@@ -6,7 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 import { useSideNav } from "@/providers/SidenavProvider";
 
 import {
-	bookLink,
+	toastTabLink,
 	facebookLink,
 	homepagePath,
 	instagramLink,
@@ -67,7 +67,7 @@ const Navigation = ({ links, className }: INavigationProps) => {
 				<Box className={styles.Navigation__mobileNav}>
 					<NavLink
 						className={styles.Navigation__mobileCTA}
-						href={bookLink}
+						href={toastTabLink}
 						cta
 					>
 						Order Online
