@@ -25,7 +25,7 @@ const Form: FC<TFormProps> = ({
 }) => {
 	const [form, setForm] = useState({});
 	const formUpdate = (
-		e: ChangeEvent<HTMLInputElement>,
+		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
 		validation: EErrorMessages[],
 	) => {
 		const { name, value } = e.target;

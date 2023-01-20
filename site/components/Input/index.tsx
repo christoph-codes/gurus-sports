@@ -17,7 +17,7 @@ export type IInputProps = {
 	};
 	onChange: (
 		// eslint-disable-next-line no-unused-vars
-		e: ChangeEvent<HTMLInputElement>,
+		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
 		// eslint-disable-next-line no-unused-vars
 		validation?: EErrorMessages[],
 	) => void;
