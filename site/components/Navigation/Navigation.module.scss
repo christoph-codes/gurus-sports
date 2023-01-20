@@ -29,6 +29,41 @@
 			display: none;
 		}
 	}
+	&__navlink {
+		span {
+
+		}
+		&--active, &:hover {
+			&::before {
+				transition: background ease-in-out 0.15s, color ease-in-out 0.15s;
+				transform: translateX(-50%);
+				border-radius: 100%;
+				position: absolute;
+				background: var(--chakra-colors-brand-primary-default);
+				bottom: -4px;
+				height: 8px;
+				content: '';
+				width: 8px;
+				left: 50%;
+			  }
+		}
+		&--active {
+			span {
+				color: var(--chakra-colors-brand-primary-default);
+			}
+			&::before {
+				background: var(--chakra-colors-brand-primary-default);
+			  }
+		}
+		&:hover {
+			span {
+				color: var(--chakra-colors-brand-secondary-light);
+			}
+			&::before {
+				background: var(--chakra-colors-brand-secondary-hover);
+			  }
+		}
+	}
 	&__utilityNav {
 		background-color: var(--chakra-colors-brand-secondary-dark);
 		height: 40px;
