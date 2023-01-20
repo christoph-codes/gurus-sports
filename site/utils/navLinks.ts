@@ -26,6 +26,12 @@ export const navigationLinks = [
 	},
 	{
 		link: {
+			label: "Careers",
+			path: "/careers",
+		},
+	},
+	{
+		link: {
 			label: "Contact",
 			path: "/contact",
 		},

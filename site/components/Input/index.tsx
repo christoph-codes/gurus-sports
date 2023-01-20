@@ -17,7 +17,7 @@ export type IInputProps = {
 	};
 	onChange: (
 		// eslint-disable-next-line no-unused-vars
-		e: ChangeEvent<HTMLInputElement>,
+		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
 		// eslint-disable-next-line no-unused-vars
 		validation?: EErrorMessages[],
 	) => void;
@@ -47,23 +47,42 @@ const Input: FC<IInputProps> = ({
 			>
 				{label}
 			</span>
-			<input
-				className={`${styles.Input__input} ${
-					form[name as keyof typeof form]?.isNotValid.some(
-						(e) => e !== "",
-					)
-						? styles["Input__input--error"]
-						: ""
-				}`}
-				name={name}
-				placeholder={placeholder}
-				type={type}
-				id={name}
-				value={form[name as keyof typeof form]?.value || ""}
-				onChange={(e) => onChange(e, validation)}
-				required={required}
-				{...rest}
-			/>
+			{type !== "textarea" ? (
+				<input
+					className={`${styles.Input__input} ${
+						form[name as keyof typeof form]?.isNotValid.some(
+							(e) => e !== "",
+						)
+							? styles["Input__input--error"]
+							: ""
+					}`}
+					name={name}
+					placeholder={placeholder}
+					type={type}
+					id={name}
+					value={form[name as keyof typeof form]?.value || ""}
+					onChange={(e) => onChange(e, validation)}
+					required={required}
+					{...rest}
+				/>
+			) : (
+				<textarea
+					className={`${styles.Input__input} ${
+						form[name as keyof typeof form]?.isNotValid.some(
+							(e) => e !== "",
+						)
+							? styles["Input__input--error"]
+							: ""
+					}`}
+					name={name}
+					placeholder={placeholder}
+					id={name}
+					value={form[name as keyof typeof form]?.value || ""}
+					onChange={(e) => onChange(e, validation)}
+					required={required}
+					{...rest}
+				/>
+			)}
 			{form[name as keyof typeof form]?.isNotValid.length > 0 && (
 				<ul className={styles.Input__errors}>
 					{form[name as keyof typeof form]?.isNotValid.map(

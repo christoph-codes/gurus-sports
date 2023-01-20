@@ -1,4 +1,5 @@
 import { Flex } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import CoverCard from "../CoverCard";
 import styles from "./HighlightCards.module.scss";
 
@@ -7,10 +8,12 @@ export interface IHighlightCardsProps {
 }
 
 const HighlightCards = ({ className }: IHighlightCardsProps) => {
+	const { pathname } = useRouter();
 	return (
 		<Flex
 			gap="24px"
 			flexDir={{ base: "column", md: "row" }}
+			marginBottom="24px"
 			className={`${styles.HighlightCards} ${className || ""}`}
 		>
 			{/* <CoverCard
@@ -18,22 +21,24 @@ const HighlightCards = ({ className }: IHighlightCardsProps) => {
 				label="Specials"
 				link="/specials"
 			/> */}
-			<CoverCard
-				bgImg="/menu_flex.png"
-				variant="secondary"
-				label="Menu"
-				link="/menu"
-			/>
-			<CoverCard
-				bgImg="/locations_flex.png"
-				label="Locations"
-				link="/locations"
-			/>
-			<CoverCard
-				bgImg="/careers_flex.png"
-				label="Careers"
-				link="/careers"
-			/>
+			{pathname !== "/menu" && (
+				<CoverCard bgImg="/menu_flex.png" label="Menu" link="/menu" />
+			)}
+			{pathname !== "/locations" && (
+				<CoverCard
+					bgImg="/locations_flex.png"
+					variant="secondary"
+					label="Locations"
+					link="/locations"
+				/>
+			)}
+			{pathname !== "/careers" && (
+				<CoverCard
+					bgImg="/careers_flex.png"
+					label="Careers"
+					link="/careers"
+				/>
+			)}
 		</Flex>
 	);
 };

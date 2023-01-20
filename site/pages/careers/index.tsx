@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import HighlightCards from "@/components/HighlightCards";
 import PageHeader from "@/components/PageHeader";
 import Title from "@/components/Title";
 import PageTemplate from "@/templates/Page";
@@ -41,7 +42,7 @@ const Careers = () => {
 			})}
 			<Box
 				paddingTop="32px"
-				marginTop="32px"
+				marginY="32px"
 				borderTop="solid 1px"
 				borderColor="brand.secondary.hover"
 			>
@@ -52,6 +53,7 @@ const Careers = () => {
 					❤️
 				</Text>
 			</Box>
+			<HighlightCards />
 		</PageTemplate>
 	);
 };

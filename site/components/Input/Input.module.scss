@@ -5,6 +5,8 @@
 		font-size: 0.875rem;
 		font-weight: bold;
 		color: var(--chakra-colors-brand-white-default);
+		margin-bottom: 4px;
+		display: block;
 		&:focus {
 			font-weight: bold;
 			color: var(--chakra-colors-brand-primary-default);
