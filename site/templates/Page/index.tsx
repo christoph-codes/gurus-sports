@@ -50,6 +50,29 @@ const PageTemplate: FC<PageProps> = ({
 					content="brand.primary.default"
 					name="msapplication-TileColor"
 				/>
+				<link
+					href="/favicon@3x.png"
+					rel="apple-touch-icon"
+					sizes="180x180"
+				/>
+				<link
+					href="/favicon@2x.png"
+					rel="icon"
+					sizes="32x32"
+					type="image/png"
+				/>
+				<link
+					href="/favicon.png"
+					rel="icon"
+					sizes="16x16"
+					type="image/png"
+				/>
+				<link href="/favicons/site.webmanifest" rel="manifest" />
+				<link
+					color="brand.primary.default"
+					href="/favicons/safari-pinned-tab.svg"
+					rel="mask-icon"
+				/>
 				<link href="/favicon.ico" rel="shortcut icon" />
 
 				{url && <link href={canonical} rel="canonical" />}
