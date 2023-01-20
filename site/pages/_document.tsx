@@ -7,12 +7,12 @@ const Document = () => (
 		<body>
 			<Main />
 			<NextScript />
-			{/* <noscript
+			<noscript
 				dangerouslySetInnerHTML={{
-					__html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF8WDH6"
+					__html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GM2RBF"
 					height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
 				}}
-			/> */}
+			/>
 		</body>
 	</Html>
 );
