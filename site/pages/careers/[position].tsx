@@ -40,7 +40,7 @@ const Position = () => {
 					<Text textAlign="center" marginBottom="32px">
 						{job.longDescription}
 					</Text>
-					{successfulSubmission ? (
+					{!successfulSubmission ? (
 						<Form
 							formName={`position-apply-${job.title}`}
 							onSubmit={submitApplication}
