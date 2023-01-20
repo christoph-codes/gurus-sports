@@ -64,19 +64,6 @@ const SideNav: FC<TSideNav> = ({
 					</NavLink>
 				);
 			})}
-			<NavLink
-				href="/careers"
-				onClick={() => toggleSideNav()}
-				className={`${
-					styles[
-						`SideNav__link${
-							pathname === "/careers" ? "--active" : ""
-						}`
-					]
-				} ${styles.SideNav__link}`}
-			>
-				Careers
-			</NavLink>
 			<Flex justifyContent="center">
 				<NavLink href={facebookLink}>
 					<Icon
