@@ -7,6 +7,7 @@ import { toastTabLink } from "@/utils/navLinks";
 import Button from "@/components/Button";
 import { Fragment } from "react";
 import { locationDetails } from "@/utils/locations";
+import HighlightCards from "@/components/HighlightCards";
 
 const Locations = () => {
 	return (
@@ -96,6 +97,7 @@ const Locations = () => {
 					Order Now
 				</Button>
 			</Flex>
+			<HighlightCards />
 		</PageTemplate>
 	);
 };
