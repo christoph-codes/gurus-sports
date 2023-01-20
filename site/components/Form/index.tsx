@@ -2,9 +2,9 @@ import { FC, useState, ChangeEvent } from "react";
 import inputValidations, { EErrorMessages } from "../../utils/inputValidations";
 import { emailSubmit } from "../../utils/emailSubmit";
 // eslint-disable-next-line import/no-unresolved
-import Button, { IButtonProps } from "../Button";
-import Input, { IInputProps } from "../Input";
-import Loader from "../Loader";
+import Button, { IButtonProps } from "@/components/Button";
+import Input, { IInputProps } from "@/components/Input";
+import Loader from "@/components/Loader";
 import styles from "./Form.module.scss";
 
 export type TFormProps = {
@@ -26,7 +26,7 @@ const Form: FC<TFormProps> = ({
 	const [form, setForm] = useState({});
 	const formUpdate = (
 		e: ChangeEvent<HTMLInputElement>,
-		validation: EErrorMessages[]
+		validation: EErrorMessages[],
 	) => {
 		const { name, value } = e.target;
 		const validate = () =>
@@ -53,7 +53,12 @@ const Form: FC<TFormProps> = ({
 		});
 	};
 	const renderInputs = inputs.map((input, index) => (
-		<Input key={index} {...input} form={form} onChange={() => formUpdate} />
+		<Input
+			key={index}
+			{...input}
+			form={form}
+			onChange={(e) => formUpdate(e, input.validation)}
+		/>
 	));
 	const [submitting, setSubmitting] = useState(false);
 	const submit = (e: ChangeEvent<HTMLFormElement>) => {
