@@ -1,4 +1,4 @@
-import { BoxProps, Text, Image, Box, Flex } from "@chakra-ui/react";
+import { BoxProps, Text, Image, Flex } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import styles from "./Review.module.scss";
 

@@ -15,6 +15,7 @@ import Container from "../Container";
 import Logo from "../Logo";
 import NavLink, { INavLinkProps, ILink } from "../NavLink";
 import styles from "./Navigation.module.scss";
+import { useRouter } from "next/router";
 
 export interface INavigationProps {
 	className?: string;
@@ -26,6 +27,7 @@ export interface INavigationProps {
 }
 
 const Navigation = ({ links, className }: INavigationProps) => {
+	const { pathname } = useRouter();
 	const { toggleSideNav } = useSideNav();
 	return (
 		<Box
@@ -40,23 +42,37 @@ const Navigation = ({ links, className }: INavigationProps) => {
 		>
 			<Container className={styles.Navigation__container}>
 				<Link
-					className={styles.Navigation__logoContainer}
+					className={`${styles.Navigation__logoContainer}`}
 					href={homepagePath}
 				>
 					<Logo className={styles.Navigation__logo} />
 				</Link>
 				<ul className={styles.Navigation__nav}>
-					{links?.map((item, index) => (
-						<NavLink
-							key={index}
-							dropdownLinks={item.dropdown}
-							cta={item.cta}
-							href={item.link.path}
-							target={item.link.target}
-						>
-							{item.link.label}
-						</NavLink>
-					))}
+					{links?.map((item, index) => {
+						const isLinkActive = pathname === item.link.path;
+						return (
+							<NavLink
+								key={index}
+								dropdownLinks={item.dropdown}
+								cta={item.cta}
+								href={item.link.path}
+								target={item.link.target}
+								className={
+									!item.cta
+										? styles[
+												`Navigation__navlink${
+													isLinkActive
+														? "--active"
+														: ""
+												}`
+										  ]
+										: ""
+								}
+							>
+								{item.link.label}
+							</NavLink>
+						);
+					})}
 					<NavLink href={instagramLink}>
 						<Icon boxSize={8} as={GrInstagram} />
 					</NavLink>

@@ -92,7 +92,9 @@ const Locations = () => {
 				);
 			})}
 			<Flex justifyContent="center" marginBottom="32px">
-				<Button href={toastTabLink}>Order Now</Button>
+				<Button href={toastTabLink} target="_blank">
+					Order Now
+				</Button>
 			</Flex>
 		</PageTemplate>
 	);

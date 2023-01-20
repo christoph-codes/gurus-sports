@@ -21,6 +21,7 @@ const PageHeader = ({
 			className={`${styles.PageHeader} ${className || ""}`}
 			flexDir={{ base: "column", md: "row" }}
 			padding={{ base: "0 0 32px", md: 0 }}
+			marginBottom={{ base: "32px", md: "48px" }}
 			{...rest}
 		>
 			<Title>{title}</Title>

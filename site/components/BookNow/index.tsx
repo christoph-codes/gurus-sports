@@ -31,7 +31,7 @@ const BookNow = ({ title, description }: IBookNowProps) => (
 				{description}
 			</Text>
 		)}
-		<Button variant="white" href={toastTabLink}>
+		<Button variant="white" href={toastTabLink} target="_blank">
 			Order Online
 		</Button>
 	</Section>

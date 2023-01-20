@@ -40,10 +40,30 @@
 				background-size: 0 2px, 100% 2px;
 			}
 		}
+		&--active {
+			&::before {
+				background: var(--chakra-colors-brand-white-default);
+				transition: background ease-in-out 0.15s, color ease-in-out 0.15s;
+				transform: translateX(-50%);
+				border-radius: 100%;
+				position: absolute;
+				top: -4px;
+				height: 8px;
+				content: '';
+				width: 8px;
+				left: 50%;
+			  }
+		}
 	}
 	&__CTA {
-		background-color: var(--chakra-colors-brand-secondary-default);
-		padding: 8px;
+		background-color: var(--chakra-colors-brand-secondary-default) !important;
+		padding: 8px !important;
+		&:hover {
+			background-color: var(--chakra-colors-brand-secondary-hover) !important;
+			span { 
+				color: var(--chakra-colors-brand-white-hover) !important;
+			}
+		}
 		span {
 			font-size: 21px !important;
 			letter-spacing: 1px;

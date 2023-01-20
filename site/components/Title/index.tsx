@@ -46,6 +46,7 @@ const Title = ({
 			as={Tag}
 			fontFamily="heading"
 			className={`${styles.Title} ${className}`}
+			textAlign={textAlign}
 			{...rest}
 		>
 			{children}

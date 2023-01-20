@@ -4,7 +4,7 @@
 	&__label {
 		font-size: 0.875rem;
 		font-weight: bold;
-		color: var(--chakra-colors-brand-black-default);
+		color: var(--chakra-colors-brand-white-default);
 		&:focus {
 			font-weight: bold;
 			color: var(--chakra-colors-brand-primary-default);
@@ -17,10 +17,11 @@
 		padding: 1rem 1.5rem;
 		border-radius: 0.25rem;
 		width: 100%;
-		border-color: var(--chakra-colors-brand-black-light);
+		border-color: var(--chakra-colors-brand-secondary-hover);
 		border-style: solid;
 		border-width: 1px;
         background-color: var(--chakra-colors-brand-black-light);
+		color: var(--chakra-colors-brand-white-default);
 		&--error {
 			border-color: var(--chakra-colors-brand-primary-default);
 		}
@@ -29,7 +30,7 @@
         list-style: none;
 		&__error {
 			font-size: 0.875rem;
-            color: var(--chakra-colors-brand-black-hover)
+            color: var(--chakra-colors-brand-secondary-hover);
 		}
 	}
 }

@@ -8,7 +8,7 @@ export type IInputProps = {
 	placeholder?: string;
 	label: string;
 	required: boolean;
-	validation?: EErrorMessages[];
+	validation: EErrorMessages[];
 	form: {
 		[name: string]: {
 			value: any;
@@ -19,7 +19,7 @@ export type IInputProps = {
 		// eslint-disable-next-line no-unused-vars
 		e: ChangeEvent<HTMLInputElement>,
 		// eslint-disable-next-line no-unused-vars
-		validation?: EErrorMessages[]
+		validation?: EErrorMessages[],
 	) => void;
 };
 
@@ -29,7 +29,7 @@ const Input: FC<IInputProps> = ({
 	placeholder,
 	label,
 	required = false,
-	validation,
+	validation = [],
 	form,
 	onChange,
 	...rest
@@ -39,7 +39,7 @@ const Input: FC<IInputProps> = ({
 			<span
 				className={`${styles.Input__label} ${
 					form[name as keyof typeof form]?.isNotValid.some(
-						(e) => e !== ""
+						(e) => e !== "",
 					)
 						? styles["Input__label--error"]
 						: ""
@@ -50,7 +50,7 @@ const Input: FC<IInputProps> = ({
 			<input
 				className={`${styles.Input__input} ${
 					form[name as keyof typeof form]?.isNotValid.some(
-						(e) => e !== ""
+						(e) => e !== "",
 					)
 						? styles["Input__input--error"]
 						: ""
@@ -75,7 +75,7 @@ const Input: FC<IInputProps> = ({
 								>
 									{err}
 								</li>
-							)
+							),
 					)}
 				</ul>
 			)}
