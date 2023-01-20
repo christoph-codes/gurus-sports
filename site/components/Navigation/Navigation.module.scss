@@ -30,17 +30,14 @@
 		}
 	}
 	&__navlink {
-		span {
-
-		}
 		&--active, &:hover {
+			transition: background ease-in-out 0.15s, color ease-in-out 0.15s;
 			&::before {
-				transition: background ease-in-out 0.15s, color ease-in-out 0.15s;
 				transform: translateX(-50%);
 				border-radius: 100%;
 				position: absolute;
 				background: var(--chakra-colors-brand-primary-default);
-				bottom: -4px;
+				top: -4px;
 				height: 8px;
 				content: '';
 				width: 8px;
