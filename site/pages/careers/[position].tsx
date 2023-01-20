@@ -79,11 +79,10 @@ const Position = () => {
 									validation: ["REQUIRED"],
 								},
 								{
-									type: "file",
+									type: "textarea",
 									name: "resume",
-									placeholder: "john@doe.com",
-									label: "Resume",
-									required: true, //@ts-ignore
+									placeholder: "Please paste your resume",
+									label: "Paste Resume", //@ts-ignore
 									validation: ["REQUIRED"],
 								},
 							]}
