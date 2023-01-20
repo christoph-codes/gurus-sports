@@ -13,11 +13,11 @@ const HighlightCards = ({ className }: IHighlightCardsProps) => {
 			flexDir={{ base: "column", md: "row" }}
 			className={`${styles.HighlightCards} ${className || ""}`}
 		>
-			<CoverCard
+			{/* <CoverCard
 				bgImg="/specials_flex.png"
 				label="Specials"
 				link="/specials"
-			/>
+			/> */}
 			<CoverCard
 				bgImg="/menu_flex.png"
 				variant="secondary"
@@ -28,6 +28,11 @@ const HighlightCards = ({ className }: IHighlightCardsProps) => {
 				bgImg="/locations_flex.png"
 				label="Locations"
 				link="/locations"
+			/>
+			<CoverCard
+				bgImg="/careers_flex.png"
+				label="Careers"
+				link="/careers"
 			/>
 		</Flex>
 	);
