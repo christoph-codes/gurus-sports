@@ -18,40 +18,6 @@ export interface ITabsProps {
 const Tabs = ({ content, className }: ITabsProps) => {
 	return (
 		<Box className={`${styles.Tabs} ${className || ""}`}>
-			{/* <Box
-				bgColor="brand.secondary.default"
-				border="none"
-				position="sticky"
-				paddingY="16px"
-				textAlign="center"
-				top={110}
-			>
-				{content.map((item, index) => {
-					return (
-						<Link
-							as={NextLink}
-							href={`#${index}`}
-							_selected={{
-								color: "brand.white.default",
-								fontWeight: "bold",
-							}}
-							_hover={{
-								color: "brand.primary.default",
-							}}
-							_focus={{
-								color: "brand.white.default",
-								backgroundColor: "transparent",
-							}}
-							padding="4px 8px"
-							color="brand.secondary.light"
-							border="none"
-							key={index}
-						>
-							{item.category}
-						</Link>
-					);
-				})}
-			</Box> */}
 			<Box>
 				{content.map((item, index) => {
 					return (

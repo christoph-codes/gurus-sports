@@ -47,6 +47,7 @@ const SideNav: FC<TSideNav> = ({
 						href={item.link.path}
 						onClick={() => toggleSideNav()}
 						cta={item.cta}
+						target={item.cta ? "_blank" : "_self"}
 						className={`${
 							!item.cta
 								? styles[

@@ -21,7 +21,9 @@ const Menu = () => {
 			/>
 			<Tabs content={menu} className={styles.Menu__tabs} />
 			<Flex justifyContent="center" paddingBottom="64px">
-				<Button href={toastTabLink}>Order Now</Button>
+				<Button href={toastTabLink} target="_blank">
+					Order Now
+				</Button>
 			</Flex>
 			<HighlightCards />
 		</PageTemplate>
