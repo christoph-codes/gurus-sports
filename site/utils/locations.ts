@@ -16,7 +16,7 @@ export const locationDetails = [
 	{
 		title: "Bluff",
 		new: false,
-		address1: "41091 N. Bluff St.",
+		address1: "1091 N. Bluff St.",
 		address2: "Ste. 1400",
 		cityStateZip: "St. George, UT 84790",
 		phone: "435.275.4248",
