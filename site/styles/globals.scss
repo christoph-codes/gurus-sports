@@ -17,12 +17,18 @@ h1,h2,h3,h4,h5,h6, p,li {
 
 h1 {
 	font-size: 100px !important;
+	
 }
 h2 {
 	font-size: 80px !important;
 }
 h3 {
 	font-size: 64px !important;
+	margin-bottom: 16px !important;
+}
+h4 {
+	font-size: 36px !important;
+	margin-bottom: 16px !important;
 }
 
 a {
@@ -38,10 +44,16 @@ a {
 	text-decoration: underline;
 	font-weight: bold;
 }
-p {
-	line-height: 1.5;
+p, li {
+	line-height: 1.5 !important;
 	color: var(--chakra-colors-brand-white-default);
 	font-family: 'Inter', sans-serif;
+}
+ul {
+	margin-bottom: 32px !important;
+}
+li {
+	line-height: 2 !important;
 }
 img {
   min-width: 0;
