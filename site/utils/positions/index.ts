@@ -1,5 +1,8 @@
-import { server } from "./_server";
+import { bartenders } from './_bartenders';
+import { dishwashers } from './_dishwashers';
+import { hosts } from './_hosts';
+import { servers } from "./_servers";
 
 export const positions = [
-	server
+	hosts, servers, bartenders, dishwashers, 
 ];
