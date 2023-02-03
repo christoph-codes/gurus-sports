@@ -30,6 +30,7 @@ const Careers = () => {
 							<Flex
 								flexDir={{ base: "column", md: "row" }}
 								justifyContent="space-between"
+								alignItems="flex-start"
 								marginBottom="16px"
 							>
 								<Title h3>{pos.title}</Title>
