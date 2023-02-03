@@ -3,7 +3,6 @@ import PageHeader from "@/components/PageHeader";
 import PageTemplate from "@/templates/Page";
 import Title from "@/components/Title";
 import styles from "./Locations.module.scss";
-import { toastTabLink } from "@/utils/navLinks";
 import Button from "@/components/Button";
 import { Fragment } from "react";
 import { locationDetails } from "@/utils/locations";
@@ -67,7 +66,11 @@ const Locations = () => {
 										{loc.cityStateZip}
 									</Text>
 									{loc.notes && <Text>{loc.notes}</Text>}
+									<Button href={loc.toasttab} target="_blank">
+										Order Now
+									</Button>
 								</Box>
+
 								<Box flexBasis="40%">
 									<Text fontWeight="bold">
 										Hours:
@@ -92,11 +95,6 @@ const Locations = () => {
 					</Box>
 				);
 			})}
-			<Flex justifyContent="center" marginBottom="32px">
-				<Button href={toastTabLink} target="_blank">
-					Order Now
-				</Button>
-			</Flex>
 			<HighlightCards />
 		</PageTemplate>
 	);

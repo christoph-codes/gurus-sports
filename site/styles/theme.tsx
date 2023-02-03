@@ -16,10 +16,11 @@ const colors = {
 		},
 		black: {
 			default: "#000000",
+			hover: "#111111",
 		},
 		white: {
 			default: "#FFFFFF",
-			hover: "#DEDEDE",
+			hover: "#c1c1c1",
 		},
 	},
 };
@@ -28,7 +29,14 @@ const fonts = {
 	heading: `'Bebas Neue', sans-serif`,
 	mono: "Menlo, monospace",
 };
+const styles = {
+	global: {
+		p: {
+			marginBottom: "24px",
+		},
+	},
+};
 
-const theme = extendTheme({ colors, fonts });
+const theme = extendTheme({ colors, fonts, styles });
 
 export default theme;

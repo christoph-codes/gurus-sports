@@ -9,11 +9,8 @@ export interface IButtonProps {
 		| "primary-outline"
 		| "secondary"
 		| "secondary-outline"
-		| "tertiary"
-		| "tertiary-outline"
-		| "quad"
-		| "quad-outline"
 		| "white"
+		| "white-outline"
 		| "black"
 		| "black-outline";
 	href?: string;

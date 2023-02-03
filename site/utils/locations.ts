@@ -1,3 +1,5 @@
+import { bluffToastTab, sunriverToastTab } from "./navLinks";
+
 export const locationDetails = [
 	{
 		title: "Sunriver",
@@ -12,6 +14,7 @@ export const locationDetails = [
 			`Monday-Saturday: 7am - 9pm`,
 		],
 		notes: "Located in the Sunriver Golf Course just off exit 2 in St. George, UT near the Arizona boarder. The Clubhouse is located just behind the SunRiver St.George community center off Bluegrass Way. Breakfast is served!",
+		toasttab: sunriverToastTab,
 	},
 	{
 		title: "Bluff",
@@ -27,5 +30,6 @@ export const locationDetails = [
 			`Friday-Saturday: 11am - 10pm`,
 		],
 		notes: "Located across the street from the Dixie Red Hills Golf Course. Major cross streets are Bluff St. & Sunset Blvd.",
+		toasttab: bluffToastTab,
 	},
 ];

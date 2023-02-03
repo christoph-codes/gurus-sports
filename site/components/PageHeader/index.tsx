@@ -5,7 +5,7 @@ import styles from "./PageHeader.module.scss";
 export interface IPageHeaderProps extends FlexProps {
 	className?: string;
 	title: string;
-	description: string;
+	description?: string;
 }
 
 const PageHeader = ({
@@ -25,12 +25,14 @@ const PageHeader = ({
 			{...rest}
 		>
 			<Title>{title}</Title>
-			<Text
-				maxWidth={{ base: "100%", md: "60%" }}
-				textAlign={{ base: "center", md: "right" }}
-			>
-				{description}
-			</Text>
+			{description && (
+				<Text
+					maxWidth={{ base: "100%", md: "60%" }}
+					textAlign={{ base: "center", md: "right" }}
+				>
+					{description}
+				</Text>
+			)}
 		</Flex>
 	);
 };

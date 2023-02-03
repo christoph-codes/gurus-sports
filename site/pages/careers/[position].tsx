@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { positions } from "@/utils/positions";
 import PageHeader from "@/components/PageHeader";
 import Title from "@/components/Title";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import Button from "@/components/Button";
 import styles from "./Position.module.scss";
 import Form from "@/components/Form";
@@ -25,24 +25,48 @@ const Position = () => {
 				metaDescription={job.shortDescription}
 				className={styles.Position}
 			>
-				<PageHeader
-					title={job.title}
-					description={job.shortDescription}
-				/>
+				<PageHeader title={job.title} />
+
 				<Box
 					marginX="auto"
 					maxWidth={{ base: "100%", md: "70%" }}
 					marginBottom="32px"
 				>
-					<Title h3 textAlign="center">
-						Job Description
-					</Title>
-					<Text textAlign="center" marginBottom="32px">
-						{job.longDescription}
+					<Button
+						href="/careers"
+						variant="white-outline"
+						className={styles.Position__back}
+					>
+						« Back to Careers
+					</Button>
+					<Title h4>Job Overview</Title>
+					<Text>{job.shortDescription}</Text>
+					{job.pay && (
+						<>
+							<Title h4>Compensation</Title>
+							<Text>{job.pay}</Text>
+						</>
+					)}
+					<Title h4>Responsibilities</Title>
+					<UnorderedList>
+						{job.responsibilities.map((resp, index) => {
+							return <ListItem key={index}>{resp}</ListItem>;
+						})}
+					</UnorderedList>
+					<Title h4>Requirements</Title>
+					<UnorderedList>
+						{job.requirements.map((resp, index) => {
+							return <ListItem key={index}>{resp}</ListItem>;
+						})}
+					</UnorderedList>
+					<Text>{job.closing}</Text>
+					<Text>
+						{`Apply today and become a part of the Guru's Sports Grill
+						& Bar team!`}
 					</Text>
 					{!successfulSubmission ? (
 						<Form
-							formName={`position-apply-${job.title}`}
+							formName={job.title}
 							onSubmit={submitApplication}
 							submitButton={{ children: "Apply Now" }}
 							inputs={[
@@ -88,7 +112,11 @@ const Position = () => {
 							]}
 						/>
 					) : (
-						<>
+						<Box
+							padding="48px"
+							borderRadius={8}
+							backgroundColor="brand.black.hover"
+						>
 							<Title
 								h3
 								textAlign="center"
@@ -96,15 +124,17 @@ const Position = () => {
 							>
 								Thank you for Applying!
 							</Title>
-							<Text textAlign="center" marginBottom="32px">
+							<Text textAlign="center">
 								If you fit what we are looking for in a{" "}
-								{job.title} someone from our team will be
+								{job.title}, someone from our team will be
 								reaching out to you soon!
 							</Text>
 							<Flex justifyContent="center">
-								<Button href="/menu">Check out our menu</Button>
+								<Button variant="white-outline" href="/careers">
+									Back to Careers
+								</Button>
 							</Flex>
-						</>
+						</Box>
 					)}
 				</Box>
 			</PageTemplate>

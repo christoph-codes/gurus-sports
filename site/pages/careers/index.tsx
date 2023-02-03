@@ -19,16 +19,21 @@ const Careers = () => {
 			/>
 			{positions.map((pos, index) => {
 				return (
-					<Box key={index} marginBottom="32px">
-						<Flex
-							justifyContent="space-between"
-							flexDir={{ base: "column", md: "row" }}
-						>
-							<Box marginBottom={{ base: "16px", md: "0" }}>
+					<Box
+						key={index}
+						marginBottom="32px"
+						paddingBottom="32px"
+						borderBottom="solid 1px"
+						borderColor="brand.secondary.hover"
+					>
+						<Box>
+							<Flex
+								flexDir={{ base: "column", md: "row" }}
+								justifyContent="space-between"
+								alignItems="flex-start"
+								marginBottom="16px"
+							>
 								<Title h3>{pos.title}</Title>
-								<Text>{pos.shortDescription}</Text>
-							</Box>
-							<Flex>
 								<Button
 									className={styles.Careers__viewBtn}
 									href={`/careers/${pos.slug}`}
@@ -36,16 +41,14 @@ const Careers = () => {
 									View Position
 								</Button>
 							</Flex>
-						</Flex>
+							<Flex>
+								<Text>{pos.shortDescription}</Text>
+							</Flex>
+						</Box>
 					</Box>
 				);
 			})}
-			<Box
-				paddingTop="32px"
-				marginY="32px"
-				borderTop="solid 1px"
-				borderColor="brand.secondary.hover"
-			>
+			<Box marginTop="32px" marginBottom="64px">
 				<Text textAlign="center">
 					Be sure to constantly check back for more new current
 					openings coming soon.
