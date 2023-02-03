@@ -1,4 +1,6 @@
-export const managers = {
+import { IPosition } from ".";
+
+export const managers: IPosition = {
 	slug: "managers",
 	title: "Managers",
     pay: '$45k Salary',

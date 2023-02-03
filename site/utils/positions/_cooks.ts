@@ -1,4 +1,6 @@
-export const cooks = {
+import { IPosition } from ".";
+
+export const cooks: IPosition = {
 	slug: "cooks",
 	title: "Cooks",
     pay: '$13 hourly (Average hourly earning  $15-$19 upon experience)',

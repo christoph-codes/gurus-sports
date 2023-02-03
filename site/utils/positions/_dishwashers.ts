@@ -1,4 +1,6 @@
-export const dishwashers = {
+import { IPosition } from ".";
+
+export const dishwashers: IPosition = {
 	slug: "dishwashers",
 	title: "Dishwashers",
 	shortDescription:

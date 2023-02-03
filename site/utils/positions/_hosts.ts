@@ -1,11 +1,9 @@
-export const hosts = {
+import { IPosition } from '.';
+export const hosts: IPosition = {
 	slug: "hosts",
 	title: "Hosts",
-    pay: '$45k Salary',
 	shortDescription:
 		"The Host is responsible for creating a warm and welcoming environment for all guests by efficiently seating and managing the flow of the dining room. This is a fast-paced and dynamic role that requires a high level of customer service and organizational skills.",
-	longDescription:
-		"We are seeking servers for our sports bar and grill located in St. George, Utah. Responsibilities include taking orders, serving food and drinks, and providing excellent customer service. Candidates should have prior experience in a fast-paced restaurant environment and a strong understanding of food and beverage service. Must be able to work evenings, weekends and holidays. If you are a team player, have a great attitude and are looking for a fun and exciting work environment, please apply today!",
 	responsibilities: [
 		"Greet guests with a warm smile and assist them with seating arrangements",
 		"Manage the waitlist and ensure a smooth flow of guests to available tables",
