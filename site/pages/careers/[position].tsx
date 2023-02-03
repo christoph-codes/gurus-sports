@@ -66,7 +66,7 @@ const Position = () => {
 					</Text>
 					{!successfulSubmission ? (
 						<Form
-							formName={`position-apply-${job.title}`}
+							formName={job.title}
 							onSubmit={submitApplication}
 							submitButton={{ children: "Apply Now" }}
 							inputs={[
