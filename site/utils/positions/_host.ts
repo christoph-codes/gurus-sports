@@ -1,7 +1,7 @@
 import { IPosition } from '.';
-export const hosts: IPosition = {
-	slug: "hosts",
-	title: "Hosts",
+export const host: IPosition = {
+	slug: "host",
+	title: "Host",
 	shortDescription:
 		"The Host is responsible for creating a warm and welcoming environment for all guests by efficiently seating and managing the flow of the dining room. This is a fast-paced and dynamic role that requires a high level of customer service and organizational skills.",
 	responsibilities: [

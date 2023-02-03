@@ -1,8 +1,8 @@
 import { IPosition } from ".";
 
-export const managers: IPosition = {
-	slug: "managers",
-	title: "Managers",
+export const manager: IPosition = {
+	slug: "manager",
+	title: "Manager",
     pay: '$45k Salary',
 	shortDescription:
 		"The Restaurant Manager is responsible for the overall operation of the restaurant, including overseeing the front-of-house and back-of-house teams, ensuring exceptional customer service, managing finances, and maintaining high standards for quality, service, and cleanliness. This role requires strong leadership, organizational, and interpersonal skills, as well as a passion for the hospitality industry.",

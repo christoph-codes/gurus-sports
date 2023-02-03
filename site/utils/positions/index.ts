@@ -1,9 +1,9 @@
-import { bartenders } from './_bartenders';
-import { cooks } from './_cooks';
-import { dishwashers } from './_dishwashers';
-import { hosts } from './_hosts';
-import { managers } from './_managers';
-import { servers } from "./_servers";
+import { bartender } from './_bartender';
+import { cook } from './_cook';
+import { dishwasher } from './_dishwasher';
+import { host } from './_host';
+import { manager } from './_manager';
+import { server } from "./_server";
 
 export interface IPosition {
 	slug: string;
@@ -16,5 +16,5 @@ export interface IPosition {
 }
 
 export const positions: IPosition[] = [
-	managers, cooks, bartenders, hosts, servers,  dishwashers, 
+	manager, cook, bartender, host, server,  dishwasher, 
 ];

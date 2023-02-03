@@ -1,8 +1,8 @@
 import { IPosition } from ".";
 
-export const cooks: IPosition = {
-	slug: "cooks",
-	title: "Cooks",
+export const cook: IPosition = {
+	slug: "cook",
+	title: "Cook",
     pay: '$13 hourly (Average hourly earning  $15-$19 upon experience)',
 	shortDescription:
 		"The Cook is responsible for preparing and cooking menu items in accordance with company recipes, standards, and presentation. This role requires strong culinary skills, attention to detail, and the ability to work in a fast-paced, high-pressure environment.",

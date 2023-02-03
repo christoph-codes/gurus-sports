@@ -1,8 +1,8 @@
 import { IPosition } from ".";
 
-export const servers: IPosition = {
-    slug: "servers",
-	title: "Servers",
+export const server: IPosition = {
+    slug: "server",
+	title: "Server",
     pay: '$2.50 hourly plus tips (average hourly earning $18-$25)',
 	shortDescription:
 		"The Bartender is responsible for providing exceptional customer service and creating a positive atmosphere by mixing and serving drinks to guests in the bar. This role requires a high level of product knowledge, attention to detail, and excellent customer service skills.",

@@ -1,8 +1,8 @@
 import { IPosition } from ".";
 
-export const dishwashers: IPosition = {
-	slug: "dishwashers",
-	title: "Dishwashers",
+export const dishwasher: IPosition = {
+	slug: "dishwasher",
+	title: "Dishwasher",
 	shortDescription:
 		"The Dishwasher is responsible for maintaining a clean and organized kitchen by properly washing and storing dishes, utensils, and kitchen equipment. This role requires attention to detail, a high level of physical activity, and a willingness to work in a fast-paced and dynamic environment.",
 	responsibilities: [
