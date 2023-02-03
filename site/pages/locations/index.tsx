@@ -3,7 +3,6 @@ import PageHeader from "@/components/PageHeader";
 import PageTemplate from "@/templates/Page";
 import Title from "@/components/Title";
 import styles from "./Locations.module.scss";
-import { toastTabLink } from "@/utils/navLinks";
 import Button from "@/components/Button";
 import { Fragment } from "react";
 import { locationDetails } from "@/utils/locations";
