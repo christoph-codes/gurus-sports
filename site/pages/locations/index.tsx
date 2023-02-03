@@ -67,7 +67,11 @@ const Locations = () => {
 										{loc.cityStateZip}
 									</Text>
 									{loc.notes && <Text>{loc.notes}</Text>}
+									<Button href={loc.toasttab} target="_blank">
+										Order Now
+									</Button>
 								</Box>
+
 								<Box flexBasis="40%">
 									<Text fontWeight="bold">
 										Hours:
@@ -92,11 +96,6 @@ const Locations = () => {
 					</Box>
 				);
 			})}
-			<Flex justifyContent="center" marginBottom="32px">
-				<Button href={toastTabLink} target="_blank">
-					Order Now
-				</Button>
-			</Flex>
 			<HighlightCards />
 		</PageTemplate>
 	);
