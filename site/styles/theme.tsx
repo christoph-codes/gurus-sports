@@ -28,7 +28,14 @@ const fonts = {
 	heading: `'Bebas Neue', sans-serif`,
 	mono: "Menlo, monospace",
 };
+const styles = {
+	global: {
+		p: {
+			marginBottom: "24px",
+		},
+	},
+};
 
-const theme = extendTheme({ colors, fonts });
+const theme = extendTheme({ colors, fonts, styles });
 
 export default theme;
