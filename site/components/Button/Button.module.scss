@@ -117,6 +117,16 @@
 			color: var(--chakra-colors-brand-black-default) !important;
 		}
 	}
+	&__white-outline {
+		background-color: transparent;
+		border-color: var(--chakra-colors-brand-white-default);
+		color: var(--chakra-colors-brand-white-default) !important;
+		&:hover {
+			background-color: transparent;
+			border-color: var(--chakra-colors-brand-white-hover);
+			color: var(--chakra-colors-brand-hover-hover) !important;
+		}
+	}
 	&__black {
 		background-color: var(--chakra-colors-brand-black-default);
 		border-color: var(--chakra-colors-brand-black-default);

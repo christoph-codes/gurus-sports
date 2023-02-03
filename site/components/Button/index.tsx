@@ -14,6 +14,7 @@ export interface IButtonProps {
 		| "quad"
 		| "quad-outline"
 		| "white"
+		| "white-outline"
 		| "black"
 		| "black-outline";
 	href?: string;
