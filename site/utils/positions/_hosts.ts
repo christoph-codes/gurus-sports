@@ -1,6 +1,7 @@
 export const hosts = {
 	slug: "hosts",
 	title: "Hosts",
+    pay: '$45k Salary',
 	shortDescription:
 		"The Host is responsible for creating a warm and welcoming environment for all guests by efficiently seating and managing the flow of the dining room. This is a fast-paced and dynamic role that requires a high level of customer service and organizational skills.",
 	longDescription:

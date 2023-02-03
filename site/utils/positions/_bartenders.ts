@@ -1,6 +1,7 @@
 export const bartenders = {
 	slug: "bartenders",
 	title: "Bartenders",
+    pay: '$5 hourly plus tips (average hourly earning $25-$30)',
 	shortDescription:
 		"The Bartender is responsible for providing exceptional customer service and creating a positive atmosphere by mixing and serving drinks to guests in the bar. This role requires a high level of product knowledge, attention to detail, and excellent customer service skills.",
 	responsibilities: [
