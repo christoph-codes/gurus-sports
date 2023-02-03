@@ -16,10 +16,11 @@ const colors = {
 		},
 		black: {
 			default: "#000000",
+			hover: "#111111",
 		},
 		white: {
 			default: "#FFFFFF",
-			hover: "#DEDEDE",
+			hover: "#c1c1c1",
 		},
 	},
 };
