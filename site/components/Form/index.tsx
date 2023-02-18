@@ -62,16 +62,34 @@ const Form: FC<TFormProps> = ({
 	const submit = (e: ChangeEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setSubmitting(true);
+		let errors: boolean = false;
 
-		const emailSubmission: { message: string; data: {} } = emailSubmit({
-			...form,
-			formType: formName,
+		/* Checking if there are any errors in the form. */
+		Object.entries(form).forEach((input: any) => {
+			input[1].isNotValid.forEach((invalidation: any) => {
+				if (invalidation.trim() !== "") {
+					errors = true;
+				} else {
+					return;
+				}
+			});
 		});
 
-		setTimeout(() => {
+		/* This is checking if there are any errors in the form. If there are no errors, it will send the
+		form data to the emailSubmit function. */
+		if (!errors) {
+			/* Destructuring the form object and adding a formType key to it. */
+			const emailSubmission: { message: string; data: {} } = emailSubmit({
+				...form,
+				formType: formName,
+			});
+			setTimeout(() => {
+				setSubmitting(false);
+				onSubmit(emailSubmission);
+			}, 1000);
+		} else {
 			setSubmitting(false);
-			onSubmit(emailSubmission);
-		}, 3000);
+		}
 	};
 
 	return (
