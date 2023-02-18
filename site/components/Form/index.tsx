@@ -1,10 +1,8 @@
 import { FC, useState, ChangeEvent } from "react";
 import inputValidations, { EErrorMessages } from "../../utils/inputValidations";
 import { emailSubmit } from "../../utils/emailSubmit";
-// eslint-disable-next-line import/no-unresolved
 import Button, { IButtonProps } from "@/components/Button";
 import Input, { IInputProps } from "@/components/Input";
-import Loader from "@/components/Loader";
 import styles from "./Form.module.scss";
 
 export type TFormProps = {
@@ -64,16 +62,34 @@ const Form: FC<TFormProps> = ({
 	const submit = (e: ChangeEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setSubmitting(true);
+		let errors: boolean = false;
 
-		const emailSubmission: { message: string; data: {} } = emailSubmit({
-			...form,
-			formType: formName,
+		/* Checking if there are any errors in the form. */
+		Object.entries(form).forEach((input: any) => {
+			input[1].isNotValid.forEach((invalidation: any) => {
+				if (invalidation.trim() !== "") {
+					errors = true;
+				} else {
+					return;
+				}
+			});
 		});
 
-		setTimeout(() => {
+		/* This is checking if there are any errors in the form. If there are no errors, it will send the
+		form data to the emailSubmit function. */
+		if (!errors) {
+			/* Destructuring the form object and adding a formType key to it. */
+			const emailSubmission: { message: string; data: {} } = emailSubmit({
+				...form,
+				formType: formName,
+			});
+			setTimeout(() => {
+				setSubmitting(false);
+				onSubmit(emailSubmission);
+			}, 1000);
+		} else {
 			setSubmitting(false);
-			onSubmit(emailSubmission);
-		}, 3000);
+		}
 	};
 
 	return (
@@ -82,13 +98,10 @@ const Form: FC<TFormProps> = ({
 			onSubmit={(e: ChangeEvent<HTMLFormElement>) => submit(e)}
 		>
 			{renderInputs}
-			{submitting ? (
-				<Loader marginTop={8} isLoading={submitting} />
-			) : (
-				<Button type="submit" {...submitButton}>
-					{submitButton.children}
-				</Button>
-			)}
+
+			<Button type="submit" {...submitButton}>
+				{submitting ? "Submitting..." : submitButton.children}
+			</Button>
 		</form>
 	);
 };

@@ -100,13 +100,14 @@ const Position = () => {
 									placeholder: "7021234567",
 									label: "Phone Number",
 									required: true, //@ts-ignore
-									validation: ["REQUIRED"],
+									validation: ["REQUIRED", "PHONE"],
 								},
 								{
 									type: "textarea",
 									name: "resume",
 									placeholder: "Please paste your resume",
-									label: "Paste Resume", //@ts-ignore
+									label: "Paste Resume",
+									required: true, //@ts-ignore
 									validation: ["REQUIRED"],
 								},
 							]}

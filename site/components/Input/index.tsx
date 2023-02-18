@@ -46,6 +46,7 @@ const Input: FC<IInputProps> = ({
 				}`}
 			>
 				{label}
+				{required && "*"}
 			</span>
 			{type !== "textarea" ? (
 				<input
