@@ -7,7 +7,7 @@ export enum EErrorMessages {
 // All functions must either return true or the error message in which failed.
 const inputValidations = {
 	REQUIRED(value: any) {
-		if (value === "") {
+		if (value.trim() === "") {
 			return EErrorMessages.REQUIRED;
 		}
 		return "";
