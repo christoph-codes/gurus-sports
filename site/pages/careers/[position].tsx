@@ -106,7 +106,7 @@ const Position = () => {
 									type: "textarea",
 									name: "resume",
 									placeholder: "Please paste your resume",
-									label: "Paste Resume", //@ts-ignore
+									required: true, //@ts-ignore
 									validation: ["REQUIRED"],
 								},
 							]}
