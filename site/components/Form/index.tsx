@@ -82,13 +82,10 @@ const Form: FC<TFormProps> = ({
 			onSubmit={(e: ChangeEvent<HTMLFormElement>) => submit(e)}
 		>
 			{renderInputs}
-			{submitting ? (
-				<Loader marginTop={8} isLoading={submitting} />
-			) : (
-				<Button type="submit" {...submitButton}>
-					{submitButton.children}
-				</Button>
-			)}
+
+			<Button type="submit" {...submitButton}>
+				{submitting ? "Submitting..." : submitButton.children}
+			</Button>
 		</form>
 	);
 };
