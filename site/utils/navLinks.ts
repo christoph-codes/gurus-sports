@@ -2,7 +2,7 @@ export const toastTabLink = "/locations";
 export const sunriverToastTab = 'https://www.toasttab.com/gurus-sports-bar-grill-2-4210-bluegrass-way'
 export const bluffToastTab = 'https://www.toasttab.com/gurussportsgrill'
 export const facebookLink =
-	"https://www.facebook.com/profile.php?id=100088242930394";
+	"https://www.facebook.com/gurussportsgrill";
 export const instagramLink = "https://www.instagram.com/gurus_sports_grill/";
 
 export const homepagePath: "/home" | "/" = "/";
